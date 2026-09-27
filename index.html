@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEOW.EXE — birthday edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot">
+  <div class="boot-inner">
+    <div class="boot-logo">MEOW<span>.EXE</span></div>
+    <div class="boot-lines" id="bootLines"></div>
+    <div class="boot-progress"><i id="bootProgress"></i></div>
+    <button id="bootBtn" class="terminal-btn hidden">[ RUN MEOW.EXE ]</button>
+  </div>
+</div>
+
+<div id="desktop" class="hidden">
+  <div class="topbar">
+    <span>MEOW.EXE</span>
+    <span id="clock"></span>
+    <span>birthday_edition / v20.0</span>
+  </div>
+
+  <div class="desktop-area">
+    <div class="desktop-title">
+      <div class="tiny">HIE MY MEOW BEAR, HAPPY 22&lt;3</div>
+      <h1>meow<span>.exe</span></h1>
+      <p>an extremely unnecessary digital birthday present.</p>
+    </div>
+
+
+    <div class="interactive-stars" aria-label="five little secrets">
+      <button class="desktop-star star-a" data-star-text="are we goonected? super yurrrr" aria-label="secret star 1">★</button>
+      <button class="desktop-star star-b" data-star-text="am i your good girl? super yurrrrrrrr" aria-label="secret star 2">★</button>
+      <button class="desktop-star star-c" data-star-text="are you my daddy? super yurrrr" aria-label="secret star 3">★</button>
+      <button class="desktop-star star-d" data-star-text="do you make me wet all the time? super duper yurrrr" aria-label="secret star 4">★</button>
+      <button class="desktop-star star-e" data-star-text="do i love you the most? superrr duperrr yurrrrrrrr" aria-label="secret star 5">★</button>
+    </div>
+    <div id="starMessage" class="star-message hidden" role="status"></div>
+
+    <div class="icons">
+      <button class="app-icon" data-app="profile"><b class="custom-icon"><img src="assets/player-profile-icon.png" alt=""></b><span>PLAYER<br>PROFILE</span></button>
+      <button class="app-icon" data-app="files"><b class="custom-icon"><img src="assets/case-files-icon.png" alt=""></b><span>CASE<br>FILES</span></button>
+      <button class="app-icon" data-app="chat"><b class="custom-icon"><img src="assets/chat-icon.png" alt=""></b><span>CHAT<br>LOG</span></button>
+      <button class="app-icon" data-app="diagnostic"><b class="custom-icon"><img src="assets/diagnostic-icon.png" alt=""></b><span>DIAGNOSTIC</span></button>
+      <button class="app-icon" data-app="music"><b class="custom-icon"><img src="assets/soundtrack-icon.png" alt=""></b><span>SOUND<br>TRACK</span></button>
+      <button class="app-icon red" data-app="ribbon"><b class="custom-icon"><img src="assets/red-ribbon-icon.png" alt=""></b><span>RED RIBBON</span></button>
+      <button class="app-icon" data-app="photos"><b class="custom-icon"><img src="assets/memory-drive-icon.png" alt=""></b><span>MEMORY<br>DRIVE</span></button>
+      <button class="app-icon" data-app="final"><b class="custom-icon"><img src="assets/final-message-icon.png" alt=""></b><span>FINAL<br>MESSAGE</span></button>
+    </div>
+
+    <div class="hint">double-click an icon / explore everything / there are secrets</div>
+  </div>
+
+  <div class="terminal-bar">
+    <span id="status">SYSTEM READY.</span>
+    <span>♡ made by your favourite menace</span>
+  </div>
+</div>
+
+<div id="windowLayer"></div>
+
+<div id="secretOverlay" class="hidden">
+  <div class="secret-card">
+    <div class="secret-top">RED RIBBON.exe / PRIVATE</div>
+    <div class="secret-content">
+      <span class="secret-heart">♡</span>
+      <div class="tiny">NO JOKES IN THIS FILE.</div>
+      <h2>hey.</h2>
+      <p>This is the one place where I'm not going to make a stupid joke about your biceps or bully you for bullying me in Valorant.</p>
+      <p>I just wanted you to know that I love you. A lot.</p>
+      <p>That's it. That's the secret.</p>
+      <button class="terminal-btn" id="closeSecret">[ close file ]</button>
+    </div>
+  </div>
+</div>
+
+<div id="cursorCat" aria-hidden="true"><img src="assets/cursor-cat.png" alt=""></div>
+
+
+  <div id="bg-music" class="bg-music" aria-label="Background music">
+    <button id="bg-music-toggle" type="button" aria-label="Play background music">♫</button>
+    <div class="bg-music-label">DREAMS FROM BUNKER HILL</div>
+  </div>
+  <audio id="bg-music-audio" src="assets/dreams-from-bunker-hill.mp4" loop preload="auto"></audio>
+  <div id="bg-music-player" class="bg-music-player" aria-hidden="true">
+    <div class="bg-music-close" id="bg-music-close">×</div>
+    <div class="bg-music-now">♫ NOW PLAYING</div>
+    <div class="bg-music-track">Dreams From Bunker Hill (Instrumental)</div>
+    <div class="bg-music-artist">Cigarettes After Sex</div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
